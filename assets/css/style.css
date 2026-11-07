@@ -1,0 +1,249 @@
+
+:root {
+    --primary-color: #b76e79;
+    --accent-color: #d99aa5;
+    --gold-color: #c5a46d;
+    --dark-color: #4a3038;
+    --light-bg: #fff8f9;
+    --white: #ffffff;
+    --text-color: #75636a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-color);
+    margin: 0;
+}
+
+/* SECCIÓN PRINCIPAL */
+.hero-section {
+    background: linear-gradient(135deg, #4b303a, #80515f, #a66c7b);
+    color: var(--white);
+    padding: 85px 0;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #e8c9b4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-copy h1 span {
+    color: #f2c6cf;
+}
+
+.hero-description {
+    color: #f3e5e8;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 520px;
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+    color: #f3e5e8;
+    font-size: 13px;
+}
+
+.note-line {
+    width: 35px;
+    height: 2px;
+    background: var(--gold-color);
+}
+
+/* IMAGEN PRINCIPAL */
+.hero-image-wrap {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(40, 15, 25, 0.30);
+}
+
+.hero-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-image-wrap:hover .hero-image {
+    transform: scale(1.04);
+}
+
+.hero-image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 18px;
+    background: rgba(74, 48, 56, 0.88);
+    border: 1px solid rgba(197, 164, 109, 0.5);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.hero-image-label span {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-image-label small {
+    color: #f2dce1;
+    margin-top: 5px;
+}
+
+/* BOTONES */
+.btn-main {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    padding: 13px 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #985663;
+    border-color: #985663;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-secondary-hero {
+    border-radius: 30px;
+    padding: 13px 25px;
+    font-weight: 600;
+    border-color: #f2c6cf;
+    color: white;
+}
+
+.btn-secondary-hero:hover {
+    background-color: #f2c6cf;
+    border-color: #f2c6cf;
+    color: #4a3038;
+}
+
+/* SECCIÓN DE BIENVENIDA */
+.welcome-section {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.eyebrow-dark {
+    color: var(--primary-color);
+}
+
+.welcome-section h2 {
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: var(--dark-color);
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* TARJETAS */
+.feature-card {
+    height: 100%;
+    padding: 35px 25px;
+    background: #fff8f9;
+    border: 1px solid #f0dce1;
+    border-radius: 18px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(183, 110, 121, 0.13);
+    border-color: var(--accent-color);
+}
+
+.feature-number {
+    color: var(--gold-color);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 18px 0 12px;
+    color: var(--dark-color);
+}
+
+.feature-card p {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.btn-more {
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.btn-more:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 767px) {
+    .hero-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .welcome-section {
+        padding: 65px 0;
+    }
+
+    .feature-card {
+        text-align: center;
+    }
+}

@@ -1,0 +1,19 @@
+
+# Archivos privados
+.env
+.env.*
+config/conexion.php
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Copias de seguridad
+*.sql~
+*.zip
+*.rar
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
